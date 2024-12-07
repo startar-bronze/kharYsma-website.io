@@ -120,11 +120,21 @@
             text-align: center;
             padding: 20px;
             margin-top: 40px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
 
         .video {
             margin: 40px 20px;
             text-align: center;
+            padding-bottom: 60px; /* Ajoute de l'espace pour éviter que le pied de page chevauche */
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 560px; /* Assure que l'iframe n'est pas trop large pour l'écran */
+            height: 315px; /* Assure un bon ratio */
         }
 
         @media (min-width: 768px) {
@@ -184,19 +194,19 @@
         <div class="card-container">
             <div class="card">
                 <h3>Album Des Rimes en Or</h3>
-                <img src="https://github.com/startar-bronze/kharYsma-website.io/blob/main/DES%20RIMES%20PETIT%20FORMAT.png" alt="Image Album Des Rimes en Or">
+                <img src="https://raw.githubusercontent.com/startar-bronze/kharYsma-website.io/main/DES%20RIMES%20PETIT%20FORMAT.png" alt="Image Album Des Rimes en Or">
                 <p>KharYsma a su conquérir le cœur de plusieurs mélomanes à travers cet album dont Energic Boy s'est classé dans le top 5 mondial des charts DRT USA en 2022. Le titre phare a atteint plus de 1 million de streams.</p>
                 <button onclick="window.open('https://www.deezer.com/en/album/333846197', '_blank')">Écoutez maintenant</button>
             </div>
             <div class="card">
                 <h3>Album Inattendu</h3>
-                <img src="https://github.com/startar-bronze/kharYsma-website.io/blob/main/INATTENDU%20PETIT%20FORMAT.png" alt="Image Album Inattendu">
+                <img src="https://raw.githubusercontent.com/startar-bronze/kharYsma-website.io/main/INATTENDU%20PETIT%20FORMAT.png" alt="Image Album Inattendu">
                 <p>Une voix pour la créativité, un bel amalgame de différents genres musicaux pour ce premier album acclamé par le public parisien.</p>
                 <button onclick="window.open('https://www.deezer.com/en/album/304720877', '_blank')">Écoutez maintenant</button>
-            </div>
+                </div>
             <div class="card">
                 <h3>Documentaire de KharYsma : 2006-2023</h3>
-                <img src="https://github.com/startar-bronze/kharYsma-website.io/blob/main/AUTOBIO%20PETIT%20FORMAT.png" alt="Image Documentaire KharYsma">
+                <img src="https://raw.githubusercontent.com/startar-bronze/kharYsma-website.io/main/AUTOBIO%20PETIT%20FORMAT.png" alt="Image Documentaire KharYsma">
                 <p>Un engagement envers l'authenticité, retraçant son parcours de 2006 à 2023.</p>
                 <button onclick="window.open('https://www.youtube.com/watch?v=o91aAkHQNv4', '_blank')">Découvrez la vidéo</button>
             </div>
