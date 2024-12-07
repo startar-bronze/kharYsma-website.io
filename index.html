@@ -6,24 +6,15 @@
     <title>KharYsma Arafat Nzaba</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px;
-            text-align: center;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
-
-        .hero div {
-            flex: 1;
-            margin-right: 20px;
-        }
-
-        .hero img {
-            border-radius: 50%;
-            border: 5px solid gold;
-            width: 150px;
-            height: auto;
+        
+        header {
+            background-color: #222;
+            padding: 20px 0;
         }
 
         header img {
@@ -33,18 +24,16 @@
             height: auto;
         }
 
-        button {
-            background-color: yellow;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
+        header h1 {
+            text-align: center;
+            color: white;
         }
 
         nav ul {
             display: flex;
             justify-content: center;
             list-style-type: none;
+            padding: 0;
         }
 
         nav ul li {
@@ -53,7 +42,75 @@
 
         nav ul li a {
             text-decoration: none;
-            color: black;
+            color: white;
+            font-size: 16px;
+        }
+        
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .hero img {
+            border-radius: 50%;
+            border: 5px solid gold;
+            width: 150px;
+            height: auto;
+            margin: 20px 0;
+        }
+        
+        button {
+            background-color: yellow;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .music, .visionary, .reservation {
+            text-align: center;
+            margin: 40px 20px;
+        }
+
+        .visionary .card-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .visionary .card {
+            margin: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 2px 2px 12px #aaa;
+            max-width: 300px;
+        }
+
+        footer {
+            background-color: #222;
+            color: #ccc;
+            font-size: 12px;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .hero, .music {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .hero div, .music div {
+                max-width: 600px;
+                text-align: center;
+            }
         }
     </style>
     <meta name="description" content="Découvrez KharYsma Arafat Nzaba, un artiste multi-talents alliant musique, littérature et peinture dans une harmonie unique.">
@@ -88,9 +145,11 @@
     </section>
 
     <section id="musique" class="music">
-        <h2>Musique inspirante</h2>
-        <p>Plongez dans une collection unique de morceaux musicaux qui capturent l'essence de la culture moderne.</p>
-        <button onclick="window.open('https://open.spotify.com/artist/0woprxb5wJHNG9yeZOXeG1', '_blank')">Écoutez maintenant</button>
+        <div>
+            <h2>Musique inspirante</h2>
+            <p>Plongez dans une collection unique de morceaux musicaux qui capturent l'essence de la culture moderne.</p>
+            <button onclick="window.open('https://open.spotify.com/artist/0woprxb5wJHNG9yeZOXeG1', '_blank')">Écoutez maintenant</button>
+        </div>
     </section>
 
     <section id="visionnaire" class="visionary">
