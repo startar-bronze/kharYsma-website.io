@@ -11,6 +11,12 @@
             align-items: center;
             justify-content: space-between;
             padding: 20px;
+            text-align: center;
+        }
+
+        .hero div {
+            flex: 1;
+            margin-right: 20px;
         }
 
         .hero img {
@@ -26,7 +32,32 @@
             width: 100px;
             height: auto;
         }
+
+        button {
+            background-color: yellow;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+        }
     </style>
+    <meta name="description" content="Découvrez KharYsma Arafat Nzaba, un artiste multi-talents alliant musique, littérature et peinture dans une harmonie unique.">
+    <meta name="keywords" content="KharYsma Arafat Nzaba, musique, littérature, peinture, artiste international">
 </head>
 <body>
     <header>
@@ -34,13 +65,16 @@
         <h1>KharYsma Arafat Nzaba</h1>
         <nav>
             <ul>
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#musique">Musique</a></li>
-                <li><a href="#livres">Livres</a></li>
-                <li><a href="#videos">Vidéos</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://startar-bronze.github.io/kharYsma-website.io/">Accueil</a></li>
+                <li><a href="https://open.spotify.com/artist/0woprxb5wJHNG9yeZOXeG1">Musique Streaming</a></li>
+                <li><a href="https://www.amazon.com/s?i=stripbooks&rh=p_27%3AS.E+BOUESSE&s=relevancerank&text=S.E+BOUESSE&ref=dp_byline_sr_book_1">Livres</a></li>
+                <li><a href="https://www.youtube.com/@kharYsma_arafat_nzaba">Vidéos</a></li>
+                <li><a href="https://drive.google.com/file/d/1uU9DXKV5YG7tTvkFQpGHsO0Z6rF3XcbO/view?usp=sharing">Biographie</a></li>
+                <li><a href="https://music.amazon.fr/podcasts/b1c1f76b-33ce-436a-92f0-57a9ef4e0377/les-billets-de-kharysma-lbdk">Podcast</a></li>
+                <li><a href="mailto:pro.nzaba@yahoo.fr">Contact</a></li>
             </ul>
         </nav>
+        <div id="google_translate_element"></div>
     </header>
     
     <section id="accueil" class="hero">
@@ -48,7 +82,7 @@
             <h2>Bienvenue dans l'univers de kharYsma Arafat Nzaba, 
                 là où la musique, la littérature et la peinture se rencontrent dans une harmonie colorée</h2>
             <p>Découvrez la créativité vibrante et le talent exceptionnel de l'artiste international.</p>
-            <button>Acheter maintenant</button>
+            <button onclick="window.open('https://amazon.fr/music/player/artists/B008LXFQ0C/kharysma-arafat-nzaba?marketplaceId=A13V1IB3VIYZZH&musicTerritory=FR&ref=dm_sh_R8GyxHG6NiaFqFY7hb0dbpzlL', '_blank')">Acheter maintenant</button>
         </div>
         <img src="https://raw.githubusercontent.com/startar-bronze/kharYsma-website.io/main/NB%20NZABA%20Arafat%20kharYsma.jpg" alt="kharYsma Image">
     </section>
@@ -56,7 +90,7 @@
     <section id="musique" class="music">
         <h2>Musique inspirante</h2>
         <p>Plongez dans une collection unique de morceaux musicaux qui capturent l'essence de la culture moderne.</p>
-        <button>Écoutez maintenant</button>
+        <button onclick="window.open('https://open.spotify.com/artist/0woprxb5wJHNG9yeZOXeG1', '_blank')">Écoutez maintenant</button>
     </section>
 
     <section id="visionnaire" class="visionary">
@@ -93,7 +127,15 @@
     <footer>
         <p>&copy; 2024 - Produit par le label Groupe Business Therapie. kharYsma Arafat NZABA is digitally sponsored by Royaume des bonnes affaires LTD (Kingdom of Good Deal). 
             the official distributor of the producer: Groupe Business Thérapie, specializing in the sale of books, films, music, and digital products from its own productions. 
-            Royaume des bonnes affaires LTD is registered in the United Kingdom with company number 11984497 , http://www.r-b-a.fr</p>
+            Royaume des bonnes affaires LTD is registered in the United Kingdom with company number 11984497, <a href="http://www.r-b-a.fr">http://www.r-b-a.fr</a></p>
     </footer>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'fr'}, 'google_translate_element');
+    }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
