@@ -57,7 +57,7 @@
         .hero img {
             border-radius: 50%;
             border: 5px solid gold;
-            width: 150px;
+            width: 200px; /* Image agrandie */
             height: auto;
             margin: 20px 0;
         }
@@ -89,7 +89,7 @@
             width: 100%;
             height: auto;
         }
-        
+
         .visionary .card-container {
             display: flex;
             justify-content: center;
@@ -113,6 +113,37 @@
             margin: 0 auto 10px;
         }
 
+        .video {
+            margin: 40px 20px;
+            text-align: center;
+            padding-bottom: 60px;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+        }
+
+        .social-follow {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .social-icon {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            margin: 0 10px;
+            background-color: #222;
+            color: white;
+            text-align: center;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
         footer {
             background-color: #222;
             color: #ccc;
@@ -123,18 +154,6 @@
             position: relative;
             bottom: 0;
             width: 100%;
-        }
-
-        .video {
-            margin: 40px 20px;
-            text-align: center;
-            padding-bottom: 60px; /* Ajoute de l'espace pour éviter que le pied de page chevauche */
-        }
-
-        iframe {
-            width: 100%;
-            max-width: 560px; /* Assure que l'iframe n'est pas trop large pour l'écran */
-            height: 315px; /* Assure un bon ratio */
         }
 
         @media (min-width: 768px) {
@@ -149,8 +168,16 @@
             }
         }
     </style>
+    
+    <!-- SEO Meta Tags -->
     <meta name="description" content="Découvrez KharYsma Arafat Nzaba, artiste multi-talents reconnu pour sa musique inspirante, sa littérature captivante, et sa peinture envoûtante.">
     <meta name="keywords" content="KharYsma Arafat Nzaba, artiste, musique, littérature, peinture, art international, albums succès, œuvres colorées">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="KharYsma Arafat Nzaba - Artiste Multi-talents">
+    <meta property="og:description" content="Plongez dans l'univers artistique de KharYsma Arafat Nzaba, artiste reconnu mondialement pour sa contribution dans la musique, la littérature et l'art visuel.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/startar-bronze/kharYsma-website.io/main/Logokan.png">
+    <meta property="og:url" content="https://startar-bronze.github.io/kharYsma-website.io/">
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
     <header>
@@ -165,6 +192,7 @@
                 <li><a href="https://drive.google.com/file/d/1uU9DXKV5YG7tTvkFQpGHsO0Z6rF3XcbO/view?usp=sharing">Biographie</a></li>
                 <li><a href="https://music.amazon.fr/podcasts/b1c1f76b-33ce-436a-92f0-57a9ef4e0377/les-billets-de-kharysma-lbdk">Podcast</a></li>
                 <li><a href="mailto:pro.nzaba@yahoo.fr">Contact</a></li>
+                <li><a href="https://www.artpal.com/kharysma">Photographie/Peinture</a></li>
             </ul>
         </nav>
         <div id="google_translate_element"></div>
@@ -203,7 +231,7 @@
                 <img src="https://raw.githubusercontent.com/startar-bronze/kharYsma-website.io/main/INATTENDU%20PETIT%20FORMAT.png" alt="Image Album Inattendu">
                 <p>Une voix pour la créativité, un bel amalgame de différents genres musicaux pour ce premier album acclamé par le public parisien.</p>
                 <button onclick="window.open('https://www.deezer.com/en/album/304720877', '_blank')">Écoutez maintenant</button>
-                </div>
+            </div>
             <div class="card">
                 <h3>Documentaire de KharYsma : 2006-2023</h3>
                 <img src="https://raw.githubusercontent.com/startar-bronze/kharYsma-website.io/main/AUTOBIO%20PETIT%20FORMAT.png" alt="Image Documentaire KharYsma">
@@ -216,8 +244,15 @@
     <section id="reservation" class="video">
         <h2>Vidéo à la une</h2>
         <p>Single Don't Mistake, + de 1 million de vues.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/FyxMDdkDS_0?autoplay=1&loop=1&playlist=FyxMDdkDS_0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/FyxMDdkDS_0?autoplay=1&loop=1&playlist=FyxMDdkDS_0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </section>
+
+    <div class="social-follow">
+        <p>Follow US/Suivez nous :</p>
+        <a href="https://www.facebook.com/kharYsmaan" target="_blank" class="social-icon">F</a>
+        <a href="https://www.instagram.com/kharysma_arafat_nzaba/" target="_blank" class="social-icon">INS</a>
+        <a href="https://linkedin.com/in/nzabamba" target="_blank" class="social-icon">LNKD</a>
+    </div>
 
     <footer style="padding-bottom: 100px;">
         <p>&copy; 2024 - Produit par le label Groupe Business Therapie. KharYsma Arafat NZABA est soutenu numériquement par Royaume des bonnes affaires LTD, le distributeur officiel du producteur. Spécialisé dans la vente de livres, films, musique et produits numériques. Enregistré au Royaume-Uni sous le numéro 11984497. Pour plus d'informations, visitez <a href="http://www.r-b-a.fr">http://www.r-b-a.fr</a>.</p>
