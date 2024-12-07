@@ -44,11 +44,11 @@
             justify-content: center;
             list-style-type: none;
             padding: 0;
-            flex-wrap: wrap; /* Ajouté pour la compatibilité mobile */
+            flex-wrap: wrap;
         }
 
         nav ul li {
-            margin: 5px 15px; /* Ajustement du margin pour la compatibilité mobile */
+            margin: 5px 15px;
         }
 
         nav ul li a {
@@ -220,66 +220,85 @@
     </section>
 
     <section id="musique" class="music">
-    <div>
-        <h2>Musique inspirante</h2>
-        <p>Plongez dans une collection unique de morceaux musicaux qui capturent l'essence de la culture moderne.</p>
-        <button onclick="window.open('https://open.spotify.com/artist/0woprxb5wJHNG9yeZOXeG1', '_blank')">Écoutez maintenant</button>
+        <div>
+            <h2>Musique inspirante</h2>
+            <p>Plongez dans une collection unique de morceaux musicaux qui capturent l'essence de la culture moderne.</p>
+            <button onclick="window.open('https://open.spotify.com/artist/0woprxb5wJHNG9yeZOXeG1', '_blank')">Écoutez maintenant</button>
+        </div>
+        <img src="https://github.com/startar-bronze/kharYsma-website.io/raw/main/PNG%20DONT%20MISTAKE%20COVER%20MOCKUP.png" alt="Couverture de l'album Don't Mistake">
+    </section>
+
+    <section id="news" style="text-align: center; margin: 20px 0;">
+        <h2 style="font-family: Arial, sans-serif; color: white; background-color: #ffdb4d; padding: 10px 0; width: 100%;">News</h2>
+        <div style="border: 3px solid #ffdb4d; box-shadow: 0 0 10px #ffdb4d; padding: 10px; display: inline-block;">
+            <div class="fb-page" 
+                 data-href="https://www.facebook.com/kharYsmaan"
+                 data-tabs="timeline"
+                 data-width="340" 
+                 data-height="500" 
+                 data-small-header="false"
+                 data-adapt-container-width="true"
+                 data-hide-cover="false"
+                 data-show-facepile="true">
+            </div>
+        </div>
+    </section>
+
+    <!-- Ajoutez le script Facebook SDK pour activer le plugin -->
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v15.0"></script>
+    
+    <section id="visionnaire" class="visionary">
+        <h2>L'Artiste Visionnaire</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Album Des Rimes en Or</h3>
+                <img src="https://raw.githubusercontent.com/startar-bronze/kharYsma-website.io/main/DES%20RIMES%20PETIT%20FORMAT.png" alt="Image Album Des Rimes en Or">
+                <p>KharYsma a su conquérir le cœur de plusieurs mélomanes à travers cet album dont Energic Boy s'est classé dans le top 5 mondial des charts DRT USA en 2022. Le titre phare a atteint plus de 1 million de streams.</p>
+                <button onclick="window.open('https://www.deezer.com/en/album/333846197', '_blank')">Écoutez maintenant</button>
+            </div>
+            <div class="card">
+                <h3>Album Inattendu</h3>
+                <img src="https://raw.githubusercontent.com/startar-bronze/kharYsma-website.io/main/INATTENDU%20PETIT%20FORMAT.png" alt="Image Album Inattendu">
+                <p>Une voix pour la créativité, un bel amalgame de différents genres musicaux pour ce premier album acclamé par le public parisien.</p>
+                <button onclick="window.open('https://www.deezer.com/en/album/304720877', '_blank')">Écoutez maintenant</button>
+            </div>
+            <div class="card">
+                <h3>Documentaire de KharYsma : 2006-2023</h3>
+                <img src="https://raw.githubusercontent.com/startar-bronze/kharYsma-website.io/main/AUTOBIO%20PETIT%20FORMAT.png" alt="Image Documentaire KharYsma">
+                <p>Un engagement envers l'authenticité, retraçant son parcours de 2006 à 2023.</p>
+                <button onclick="window.open('https://www.youtube.com/watch?v=o91aAkHQNv4', '_blank')">Découvrez la vidéo</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="reservation" class="video">
+        <h2>Vidéo à la une</h2>
+        <p>Single Don't Mistake, + de 1 million de vues.</p>
+        <iframe src="https://www.youtube.com/embed/FyxMDdkDS_0?autoplay=1&loop=1&playlist=FyxMDdkDS_0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </section>
+
+    <div class="social-follow">
+        <p>Follow US/Suivez nous :</p>
+        <a href="https://www.facebook.com/kharYsmaan" target="_blank" class="social-icon">F</a>
+        <a href="https://www.instagram.com/kharysma_arafat_nzaba/" target="_blank" class="social-icon">INS</a>
+        <a href="https://linkedin.com/in/nzabamba" target="_blank" class="social-icon">LNKD</a>
     </div>
-    <img src="https://github.com/startar-bronze/kharYsma-website.io/raw/main/PNG%20DONT%20MISTAKE%20COVER%20MOCKUP.png" alt="Couverture de l'album Don't Mistake">
-</section>
 
-<section id="visionnaire" class="visionary">
-    <h2>L'Artiste Visionnaire</h2>
-    <div class="card-container">
-        <div class="card">
-            <h3>Album Des Rimes en Or</h3>
-            <img src="https://raw.githubusercontent.com/startar-bronze/kharYsma-website.io/main/DES%20RIMES%20PETIT%20FORMAT.png" alt="Image Album Des Rimes en Or">
-            <p>KharYsma a su conquérir le cœur de plusieurs mélomanes à travers cet album dont Energic Boy s'est classé dans le top 5 mondial des charts DRT USA en 2022. Le titre phare a atteint plus de 1 million de streams.</p>
-            <button onclick="window.open('https://www.deezer.com/en/album/333846197', '_blank')">Écoutez maintenant</button>
-        </div>
-        <div class="card">
-            <h3>Album Inattendu</h3>
-            <img src="https://raw.githubusercontent.com/startar-bronze/kharYsma-website.io/main/INATTENDU%20PETIT%20FORMAT.png" alt="Image Album Inattendu">
-            <p>Une voix pour la créativité, un bel amalgame de différents genres musicaux pour ce premier album acclamé par le public parisien.</p>
-            <button onclick="window.open('https://www.deezer.com/en/album/304720877', '_blank')">Écoutez maintenant</button>
-        </div>
-        <div class="card">
-            <h3>Documentaire de KharYsma : 2006-2023</h3>
-            <img src="https://raw.githubusercontent.com/startar-bronze/kharYsma-website.io/main/AUTOBIO%20PETIT%20FORMAT.png" alt="Image Documentaire KharYsma">
-            <p>Un engagement envers l'authenticité, retraçant son parcours de 2006 à 2023.</p>
-            <button onclick="window.open('https://www.youtube.com/watch?v=o91aAkHQNv4', '_blank')">Découvrez la vidéo</button>
-        </div>
+    <div style="text-align: center; margin: 20px 0;">
+        <p>Email: <a href="mailto:contact@kharysma-an.fr">contact@kharysma-an.fr</a></p>
     </div>
-</section>
 
-<section id="reservation" class="video">
-    <h2>Vidéo à la une</h2>
-    <p>Single Don't Mistake, + de 1 million de vues.</p>
-    <iframe src="https://www.youtube.com/embed/FyxMDdkDS_0?autoplay=1&loop=1&playlist=FyxMDdkDS_0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</section>
+    <footer style="padding-bottom: 100px;">
+        <p>&copy; 2024 - Produit par le label Groupe Business Therapie. KharYsma Arafat NZABA est soutenu numériquement par Royaume des bonnes affaires LTD, le distributeur officiel du producteur. Spécialisé dans la vente de livres, films, musique et produits numériques. Enregistré au Royaume-Uni sous le numéro 11984497. Pour plus d'informations, visitez <a href="http://www.r-b-a.fr">http://www.r-b-a.fr</a>.</p>
+    </footer>
 
-<div class="social-follow">
-    <p>Follow US/Suivez nous :</p>
-    <a href="https://www.facebook.com/kharYsmaan" target="_blank" class="social-icon">F</a>
-    <a href="https://www.instagram.com/kharysma_arafat_nzaba/" target="_blank" class="social-icon">INS</a>
-    <a href="https://linkedin.com/in/nzabamba" target="_blank" class="social-icon">LNKD</a>
-</div>
-
-<div style="text-align: center; margin: 20px 0;">
-    <p>Email: <a href="mailto:contact@kharysma-an.fr">contact@kharysma-an.fr</a></p>
-</div>
-
-<footer style="padding-bottom: 100px;">
-    <p>&copy; 2024 - Produit par le label Groupe Business Therapie. KharYsma Arafat NZABA est soutenu numériquement par Royaume des bonnes affaires LTD, le distributeur officiel du producteur. Spécialisé dans la vente de livres, films, musique et produits numériques. Enregistré au Royaume-Uni sous le numéro 11984497. Pour plus d'informations, visitez <a href="http://www.r-b-a.fr">http://www.r-b-a.fr</a>.</p>
-</footer>
-
-<!-- Google Translate Script -->
-<script type="text/javascript">
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({pageLanguage: 'fr'}, 'google_translate_element');
-    }
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'fr'}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
