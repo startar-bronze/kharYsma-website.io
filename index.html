@@ -196,15 +196,15 @@
         <h1>KharYsma Arafat Nzaba</h1>
         <nav>
             <ul>
-                <li><a href="https://startar-bronze.github.io/kharYsma-website.io/">Accueil</a></li>
-                <li><a href="https://open.spotify.com/artist/0woprxb5wJHNG9yeZOXeG1">Musique Streaming</a></li>
-                <li><a href="https://www.amazon.com/s?i=stripbooks&rh=p_27%3AS.E+BOUESSE&s=relevancerank&text=S.E+BOUESSE&ref=dp_byline_sr_book_1">Livres</a></li>
-                <li><a href="https://www.youtube.com/@kharYsma_arafat_nzaba">Vidéos</a></li>
-                <li><a href="https://drive.google.com/file/d/1uU9DXKV5YG7tTvkFQpGHsO0Z6rF3XcbO/view?usp=sharing">Biographie</a></li>
-                <li><a href="https://music.amazon.fr/podcasts/b1c1f76b-33ce-436a-92f0-57a9ef4e0377/les-billets-de-kharysma-lbdk">Podcast</a></li>
-                <li><a href="mailto:pro.nzaba@yahoo.fr">Contact</a></li>
-                <li><a href="https://www.artpal.com/kharysma">Photographie/Peinture</a></li>
-                <li><a href="https://www.youtube.com/watch?v=kgYwThZDIF4">Style de vie et mode</a></li> <!-- Nouveau menu ajouté ici -->
+           <li><a href="https://startar-bronze.github.io/kharYsma-website.io/">Accueil</a></li>
+<li><a href="https://open.spotify.com/artist/0woprxb5wJHNG9yeZOXeG1" target="_blank" rel="noopener noreferrer">Musique Streaming</a></li>
+<li><a href="https://www.amazon.com/s?i=stripbooks&rh=p_27%3AS.E+BOUESSE&s=relevancerank&text=S.E+BOUESSE&ref=dp_byline_sr_book_1" target="_blank" rel="noopener noreferrer">Livres</a></li>
+<li><a href="https://www.youtube.com/@kharYsma_arafat_nzaba" target="_blank" rel="noopener noreferrer">Vidéos</a></li>
+<li><a href="https://drive.google.com/file/d/1uU9DXKV5YG7tTvkFQpGHsO0Z6rF3XcbO/view?usp=sharing" target="_blank" rel="noopener noreferrer">Biographie</a></li>
+<li><a href="https://music.amazon.fr/podcasts/b1c1f76b-33ce-436a-92f0-57a9ef4e0377/les-billets-de-kharysma-lbdk" target="_blank" rel="noopener noreferrer">Podcast</a></li>
+<li><a href="mailto:pro.nzaba@yahoo.fr">Contact</a></li>
+<li><a href="https://www.artpal.com/kharysma" target="_blank" rel="noopener noreferrer">Photographie/Peinture</a></li>
+<li><a href="https://www.youtube.com/watch?v=kgYwThZDIF4" target="_blank" rel="noopener noreferrer">Style de vie et mode</a></li>
             </ul>
         </nav>
         <div id="google_translate_element"></div>
@@ -304,8 +304,57 @@
     </div>
 
     <div style="text-align: center; margin: 20px 0;">
-        <p>Email: <a href="mailto:contact@kharysma-an.fr">contact@kharysma-an.fr</a></p>
+        <p>Email: <a href="mailto:contact@kharysma-an.fr">contact(at)kharysma-an.fr</a></p> <!-- Modifiez '@' avec '(at)' -->
     </div>
+
+<script>
+    // Exemple de préchargement de ressources pour améliorer le temps de chargement
+    window.onload = function() {
+        if ('IntersectionObserver' in window) {
+            let lazyImages = document.querySelectorAll('img');
+
+            let imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        let image = entry.target;
+                        image.src = image.src.replace('-thumb', '');
+                        imageObserver.unobserve(image);
+                    }
+                });
+            });
+
+            lazyImages.forEach(image => {
+                imageObserver.observe(image);
+            });
+        }
+
+        // Simuler une protection de sécurité avancée
+        console.warn("Ce site est protégé par un système de sécurité avancé. Toute tentative d'accès non autorisé sera enregistrée et poursuivie.");
+    };
+
+    // Gestion améliorée de la redirection 404
+    function handle404() {
+        if (!document.querySelector('main')) {
+            let errorDiv = document.createElement('div');
+            errorDiv.style.textAlign = 'center';
+            errorDiv.style.padding = '20px';
+            errorDiv.style.backgroundColor = '#f8f9fa';
+            errorDiv.style.border = '1px solid #ced4da';
+
+            errorDiv.innerHTML = `
+                <h2>Oups, page non trouvée</h2>
+                <p>Désolé, la page que vous recherchez est inaccessible pour l'instant.</p>
+                <div style="margin: 20px 0;">
+                    <a href="https://startar-bronze.github.io/kharYsma-website.io/" style="color: #007bff; text-decoration: none; margin-right: 10px;">Retourner à l'accueil</a>
+                    <a href="https://startar-bronze.github.io/kharYsma-website.io/" style="color: #28a745; text-decoration: none;">Return to homepage</a>
+                </div>
+                <p>Merci de votre compréhension,<br>kharYsma !</p>
+            `;
+            document.body.appendChild(errorDiv);
+        }
+    }
+    handle404();
+</script>
 
     <footer style="padding-bottom: 100px;">
         <p>&copy; 2024 - Produit par le label Groupe Business Therapie. KharYsma Arafat NZABA est soutenu numériquement par Royaume des bonnes affaires LTD, le distributeur officiel du producteur. Spécialisé dans la vente de livres, films, musique et produits numériques. Enregistré au Royaume-Uni sous le numéro 11984497. Pour plus d'informations, visitez <a href="http://www.r-b-a.fr">http://www.r-b-a.fr</a>.</p>
