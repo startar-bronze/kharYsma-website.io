@@ -1,0 +1,6 @@
+User-agent: *
+   Disallow: /private/
+   Allow: /
+
+   # Optionnel : Lien vers le plan du site
+   Sitemap: https://startar-bronze.github.io/kharYsma-website.io/sitemap.xml
