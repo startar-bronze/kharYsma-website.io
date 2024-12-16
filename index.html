@@ -307,6 +307,10 @@
         <p>Email: <a href="mailto:contact@kharysma-an.fr">contact(at)kharysma-an.fr</a></p> <!-- Modifiez '@' avec '(at)' -->
     </div>
 
+<div style="text-align: center; margin: 20px 0;">
+    <p>Email: <a href="mailto:contact@kharysma-an.fr">contact(at)kharysma-an.fr</a></p> <!-- Modifiez '@' avec '(at)' -->
+</div>
+
 <script>
     // Exemple de préchargement de ressources pour améliorer le temps de chargement
     window.onload = function() {
@@ -332,28 +336,57 @@
         console.warn("Ce site est protégé par un système de sécurité avancé. Toute tentative d'accès non autorisé sera enregistrée et poursuivie.");
     };
 
-    // Gestion améliorée de la redirection 404
-    function handle404() {
-        if (!document.querySelector('main')) {
-            let errorDiv = document.createElement('div');
-            errorDiv.style.textAlign = 'center';
-            errorDiv.style.padding = '20px';
-            errorDiv.style.backgroundColor = '#f8f9fa';
-            errorDiv.style.border = '1px solid #ced4da';
+    // Gestion conditionnelle de la page 404
+    function loadPage(url, maxAttempts = 3) {
+        let attempts = 0;
 
-            errorDiv.innerHTML = `
-                <h2>Oups, page non trouvée</h2>
-                <p>Désolé, la page que vous recherchez est inaccessible pour l'instant.</p>
-                <div style="margin: 20px 0;">
-                    <a href="https://startar-bronze.github.io/kharYsma-website.io/" style="color: #007bff; text-decoration: none; margin-right: 10px;">Retourner à l'accueil</a>
-                    <a href="https://startar-bronze.github.io/kharYsma-website.io/" style="color: #28a745; text-decoration: none;">Return to homepage</a>
-                </div>
-                <p>Merci de votre compréhension,<br>kharYsma !</p>
-            `;
-            document.body.appendChild(errorDiv);
+        function tryLoad() {
+            attempts++;
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        if (attempts < maxAttempts) {
+                            setTimeout(tryLoad, 1000); // Retry after 1 second
+                        } else {
+                            show404();
+                        }
+                    } else {
+                        console.log("Page loaded successfully");
+                    }
+                })
+                .catch(error => {
+                    if (attempts < maxAttempts) {
+                        setTimeout(tryLoad, 1000); // Retry after 1 second
+                    } else {
+                        show404();
+                    }
+                });
         }
+
+        tryLoad();
     }
-    handle404();
+
+    function show404() {
+        let errorDiv = document.createElement('div');
+        errorDiv.style.textAlign = 'center';
+        errorDiv.style.padding = '20px';
+        errorDiv.style.backgroundColor = '#f8f9fa';
+        errorDiv.style.border = '1px solid #ced4da';
+
+        errorDiv.innerHTML = `
+            <h2>Oups, page non trouvée</h2>
+            <p>Désolé, la page que vous recherchez est inaccessible pour l'instant.</p>
+            <div style="margin: 20px 0;">
+                <a href="https://startar-bronze.github.io/kharYsma-website.io/" style="color: #007bff; text-decoration: none; margin-right: 10px;">Retourner à l'accueil</a>
+                <a href="https://startar-bronze.github.io/kharYsma-website.io/" style="color: #28a745; text-decoration: none;">Return to homepage</a>
+            </div>
+            <p>Merci de votre compréhension,<br>kharYsma !</p>
+        `;
+        document.body.appendChild(errorDiv);
+    }
+
+    // Utilisez la fonction pour tenter de charger la page d'accueil
+    loadPage(window.location.href);
 </script>
 
     <footer style="padding-bottom: 100px;">
