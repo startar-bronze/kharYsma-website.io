@@ -15,12 +15,177 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KharYsma Arafat Nzaba - Artiste Multi-talents</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #222;
+            padding: 20px 0;
+        }
+
+        header img {
+            display: block;
+            margin: 0 auto;
+            width: 100px;
+            height: auto;
+        }
+
+        header h1 {
+            text-align: center;
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 5px 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .hero img {
+            border-radius: 50%;
+            border: 5px solid gold;
+            width: 200px;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        button {
+            background-color: yellow;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .music {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 40px 20px;
+            text-align: center;
+        }
+
+        .music div {
+            max-width: 300px;
+            margin-right: 20px;
+        }
+
+        .music img {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+        }
+
+        .visionary .card-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .visionary .card {
+            margin: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 2px 2px 12px #aaa;
+            max-width: 300px;
+        }
+
+        .visionary .card img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+        }
+
+        .video {
+            margin: 40px 20px;
+            text-align: center;
+            padding-bottom: 60px;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+        }
+
+        .social-follow {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .social-icon {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            margin: 0 10px;
+            background-color: #222;
+            color: white;
+            text-align: center;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        footer {
+            background-color: #222;
+            color: #ccc;
+            font-size: 12px;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .hero, .music, .video {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .hero div, .music div {
+                max-width: 600px;
+                text-align: center;
+            }
+        }
+    </style>
+
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Découvrez l'univers artistique de KharYsma Arafat Nzaba: musique, littérature, peinture. Un voyage à travers ses œuvres innovantes et captivantes, y compris un blog sur les hobbies et la nourriture.">
-    <meta name="keywords" content="KharYsma Arafat Nzaba, artiste, musique, littérature, peinture, albums, œuvres, art international, blog, hobbies, foods, drinks, art">
+    <meta name="description" content="Découvrez l'univers artistique de KharYsma Arafat Nzaba: musique, littérature, peinture. Un voyage à travers ses œuvres innovantes et captivantes.">
+    <meta name="keywords" content="KharYsma Arafat Nzaba, artiste, musique, littérature, peinture, albums, œuvres, art international">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="KharYsma Arafat Nzaba - Artiste Multi-talents">
-    <meta property="og:description" content="Plongez dans l'univers artistique de KharYsma Arafat Nzaba, artiste reconnu mondialement pour sa contribution à l'art sous toutes ses formes, y compris un blog captivant.">
+    <meta property="og:description" content="Plongez dans l'univers artistique de KharYsma Arafat Nzaba, artiste reconnu mondialement pour sa contribution à l'art sous toutes ses formes.">
     <meta property="og:image" content="https://raw.githubusercontent.com/startar-bronze/kharYsma-website.io/main/Logokan.png">
     <meta property="og:url" content="https://startar-bronze.github.io/kharYsma-website.io/">
     <meta name="twitter:card" content="summary_large_image">
@@ -31,15 +196,15 @@
         <h1>KharYsma Arafat Nzaba</h1>
         <nav>
             <ul>
-                <li><a href="https://startar-bronze.github.io/kharYsma-website.io/">Accueil</a></li>
-                <li><a href="https://open.spotify.com/artist/0woprxb5wJHNG9yeZOXeG1" target="_blank" rel="noopener noreferrer">Musique Streaming</a></li>
-                <li><a href="https://www.amazon.com/s?i=stripbooks&rh=p_27%3AS.E+BOUESSE&s=relevancerank&text=S.E+BOUESSE&ref=dp_byline_sr_book_1" target="_blank" rel="noopener noreferrer">Livres</a></li>
-                <li><a href="https://www.youtube.com/@kharYsma_arafat_nzaba" target="_blank" rel="noopener noreferrer">Vidéos</a></li>
-                <li><a href="https://drive.google.com/file/d/1uU9DXKV5YG7tTvkFQpGHsO0Z6rF3XcbO/view?usp=sharing" target="_blank" rel="noopener noreferrer">Biographie</a></li>
-                <li><a href="https://music.amazon.fr/podcasts/b1c1f76b-33ce-436a-92f0-57a9ef4e0377/les-billets-de-kharysma-lbdk" target="_blank" rel="noopener noreferrer">Podcast</a></li>
-                <li><a href="mailto:pro.nzaba@yahoo.fr">Contact</a></li>
-                <li><a href="https://www.artpal.com/kharysma" target="_blank" rel="noopener noreferrer">Photographie/Peinture</a></li>
-                <li><a href="https://www.youtube.com/watch?v=kgYwThZDIF4" target="_blank" rel="noopener noreferrer">Style de vie et mode</a></li>
+           <li><a href="https://startar-bronze.github.io/kharYsma-website.io/">Accueil</a></li>
+<li><a href="https://open.spotify.com/artist/0woprxb5wJHNG9yeZOXeG1" target="_blank" rel="noopener noreferrer">Musique Streaming</a></li>
+<li><a href="https://www.amazon.com/s?i=stripbooks&rh=p_27%3AS.E+BOUESSE&s=relevancerank&text=S.E+BOUESSE&ref=dp_byline_sr_book_1" target="_blank" rel="noopener noreferrer">Livres</a></li>
+<li><a href="https://www.youtube.com/@kharYsma_arafat_nzaba" target="_blank" rel="noopener noreferrer">Vidéos</a></li>
+<li><a href="https://drive.google.com/file/d/1uU9DXKV5YG7tTvkFQpGHsO0Z6rF3XcbO/view?usp=sharing" target="_blank" rel="noopener noreferrer">Biographie</a></li>
+<li><a href="https://music.amazon.fr/podcasts/b1c1f76b-33ce-436a-92f0-57a9ef4e0377/les-billets-de-kharysma-lbdk" target="_blank" rel="noopener noreferrer">Podcast</a></li>
+<li><a href="mailto:pro.nzaba@yahoo.fr">Contact</a></li>
+<li><a href="https://www.artpal.com/kharysma" target="_blank" rel="noopener noreferrer">Photographie/Peinture</a></li>
+<li><a href="https://www.youtube.com/watch?v=kgYwThZDIF4" target="_blank" rel="noopener noreferrer">Style de vie et mode</a></li>
             </ul>
         </nav>
         <div id="google_translate_element"></div>
@@ -47,7 +212,8 @@
 
     <section id="accueil" class="hero">
         <div>
-            <h2>Bienvenue dans l'univers de KharYsma Arafat Nzaba, où la musique, la littérature et la peinture se rencontrent dans une harmonie colorée</h2>
+            <h2>Bienvenue dans l'univers de KharYsma Arafat Nzaba, 
+                où la musique, la littérature et la peinture se rencontrent dans une harmonie colorée</h2>
             <p>Découvrez la créativité vibrante et le talent exceptionnel de l'artiste international.</p>
             <button onclick="window.open('https://amazon.fr/music/player/artists/B008LXFQ0C/kharysma-arafat-nzaba?marketplaceId=A13V1IB3VIYZZH&musicTerritory=FR&ref=dm_sh_R8GyxHG6NiaFqFY7hb0dbpzlL', '_blank')">Acheter maintenant</button>
         </div>
@@ -63,6 +229,20 @@
         <img src="https://github.com/startar-bronze/kharYsma-website.io/raw/main/PNG%20DONT%20MISTAKE%20COVER%20MOCKUP.png" alt="Couverture de l'album Don't Mistake">
     </section>
 
+    <section id="news" style="text-align: center; margin: 20px 0;">
+    <h2 style="font-family: Arial, sans-serif; color: white; background-color: #9acd32; padding: 10px 0; width: 100%;">News/Mode and Lifestyle</h2>
+    <div style="border: 3px solid #9acd32; box-shadow: 0 0 10px #9acd32; padding: 10px; display: inline-block; max-width: 600px; margin: 0 auto;">
+        <p style="font-weight: bold;">
+            kharYsma Arafat NZABA vous souhaite une bonne année 2025 et en profite pour vous annoncer la sortie de son récent livre 
+            <em>Se Protéger des Inondations et Tempêtes : Guide Pratique: US TRANSLATION INCLUDE (French Edition)</em>,
+            disponible au lien suivant 
+            <a href="https://www.amazon.com/Se-Prot%C3%A9ger-Inondations-Temp%C3%AAtes-TRANSLATION/dp/B0DK13C229/ref=sr_1_2?dib=eyJ2IjoiMSJ9.-oodmhIkgqmdyMM2SDg7whEqVKr_2iLYcPcdfD2HHB7GjHj071QN20LucGBJIEps.ZPck6ACRJu1XJo9nzEY3UMSDclkMv1ozOKzAVCOPAxA&dib_tag=se&qid=1733605857&refinements=p_27%3AS.E+BOUESSE&s=books&sr=1-2&text=S.E+BOUESSE" target="_blank">
+                lien suivant
+            </a>.
+        </p>
+    </div>
+</section>
+    
     <section id="visionnaire" class="visionary">
         <h2>L'Artiste Visionnaire</h2>
         <div class="card-container">
@@ -72,24 +252,150 @@
                 <p>KharYsma a su conquérir le cœur de plusieurs mélomanes à travers cet album dont Energic Boy s'est classé dans le top 5 mondial des charts DRT USA en 2022. Le titre phare a atteint plus de 1 million de streams.</p>
                 <button onclick="window.open('https://www.deezer.com/en/album/333846197', '_blank')">Écoutez maintenant</button>
             </div>
+            <div class="card">
+                <h3>Album Inattendu</h3>
+                <img src="https://raw.githubusercontent.com/startar-bronze/kharYsma-website.io/main/INATTENDU%20PETIT%20FORMAT.png" alt="Image Album Inattendu">
+                <p>Une voix pour la créativité, un bel amalgame de différents genres musicaux pour ce premier album acclamé par le public parisien.</p>
+                <button onclick="window.open('https://www.deezer.com/en/album/304720877', '_blank')">Écoutez maintenant</button>
+            </div>
+            <div class="card">
+                <h3>Documentaire de KharYsma : 2006-2023</h3>
+                <img src="https://raw.githubusercontent.com/startar-bronze/kharYsma-website.io/main/AUTOBIO%20PETIT%20FORMAT.png" alt="Image Documentaire KharYsma">
+                <p>Un engagement envers l'authenticité, retraçant son parcours de 2006 à 2023.</p>
+                <button onclick="window.open('https://www.youtube.com/watch?v=o91aAkHQNv4', '_blank')">Découvrez la vidéo</button>
+            </div>
         </div>
     </section>
 
     <section id="reservation" class="video">
         <h2>Vidéo à la une</h2>
-        <iframe src="https://www.youtube.com/embed/FyxMDdkDS_0?autoplay=1&loop=1&playlist=FyxMDdkDS_0" frameborder="0" allowfullscreen></iframe>
+        <p>Single Don't Mistake, + de 1 million de vues.</p>
+        <iframe src="https://www.youtube.com/embed/FyxMDdkDS_0?autoplay=1&loop=1&playlist=FyxMDdkDS_0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </section>
 
-    <section id="blog" class="blog" style="margin: 40px 20px; text-align: center;">
-        <h2>Blog: Hobbies, Interests, and Food & Drink</h2>
-        <iframe 
-            src="https://kharysmataste.blogspot.com/" 
-            style="width: 100%; max-width: 800px; height: 600px; border: none; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
-        </iframe>
-    </section>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "kharYsma Arafat NZABA",
+      "givenName": "Bouesse",
+      "familyName": "NZABA",
+      "alternateName": "kharYsma",
+      "description": "Artiste multitalent proposant musique, livres, vidéos, et un aperçu unique sur le style de vie et la mode artistique.",
+      "url": "https://kharysma-an.fr",
+      "sameAs": [
+        "https://facebook.com/kharysmaan",
+        "https://www.instagram.com/kharysma_arafat_nzaba/"
+      ],
+      "email": "mailto:klymrecords@gmail.com",
+      "knowsAbout": ["Musique", "Livres", "Vidéos", "Style de vie", "Mode artistique"]
+    }
+    </script>
+</body>
+</html>
+
+
+    
+    <div class="social-follow">
+        <p>Follow US/Suivez nous :</p>
+        <a href="https://www.facebook.com/kharYsmaan" target="_blank" class="social-icon">F</a>
+        <a href="https://www.instagram.com/kharysma_arafat_nzaba/" target="_blank" class="social-icon">INS</a>
+        <a href="https://linkedin.com/in/nzabamba" target="_blank" class="social-icon">LNKD</a>
+    </div>
+
+    <div style="text-align: center; margin: 20px 0;">
+        <p>Email: <a href="mailto:contact@kharysma-an.fr">contact(at)kharysma-an.fr</a></p> <!-- Modifiez '@' avec '(at)' -->
+    </div>
+
+<script>
+    // Exemple de préchargement de ressources pour améliorer le temps de chargement
+    window.onload = function() {
+        if ('IntersectionObserver' in window) {
+            let lazyImages = document.querySelectorAll('img');
+
+            let imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        let image = entry.target;
+                        image.src = image.src.replace('-thumb', '');
+                        imageObserver.unobserve(image);
+                    }
+                });
+            });
+
+            lazyImages.forEach(image => {
+                imageObserver.observe(image);
+            });
+        }
+
+        // Simuler une protection de sécurité avancée
+        console.warn("Ce site est protégé par un système de sécurité avancé. Toute tentative d'accès non autorisé sera enregistrée et poursuivie.");
+    };
+
+    // Gestion conditionnelle de la page 404
+    function loadPage(url, maxAttempts = 3) {
+        let attempts = 0;
+
+        function tryLoad() {
+            attempts++;
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        if (attempts < maxAttempts) {
+                            setTimeout(tryLoad, 1000); // Retry after 1 second
+                        } else {
+                            show404();
+                        }
+                    } else {
+                        console.log("Page loaded successfully");
+                    }
+                })
+                .catch(error => {
+                    if (attempts < maxAttempts) {
+                        setTimeout(tryLoad, 1000); // Retry after 1 second
+                    } else {
+                        show404();
+                    }
+                });
+        }
+
+        tryLoad();
+    }
+
+    function show404() {
+        let errorDiv = document.createElement('div');
+        errorDiv.style.textAlign = 'center';
+        errorDiv.style.padding = '20px';
+        errorDiv.style.backgroundColor = '#f8f9fa';
+        errorDiv.style.border = '1px solid #ced4da';
+
+        errorDiv.innerHTML = 
+            <h2>Oups, page non trouvée</h2>
+            <p>Désolé, la page que vous recherchez est inaccessible pour l'instant.</p>
+            <div style="margin: 20px 0;">
+                <a href="https://startar-bronze.github.io/kharYsma-website.io/" style="color: #007bff; text-decoration: none; margin-right: 10px;">Retourner à l'accueil</a>
+                <a href="https://startar-bronze.github.io/kharYsma-website.io/" style="color: #28a745; text-decoration: none;">Return to homepage</a>
+            </div>
+            <p>Merci de votre compréhension,<br>kharYsma !</p>
+        ;
+        document.body.appendChild(errorDiv);
+    }
+
+    // Utilisez la fonction pour tenter de charger la page d'accueil
+    loadPage(window.location.href);
+</script>
 
     <footer style="padding-bottom: 100px;">
         <p>&copy; 2024 - Produit par le label Groupe Business Therapie. KharYsma Arafat NZABA est soutenu numériquement par Royaume des bonnes affaires LTD, le distributeur officiel du producteur. Spécialisé dans la vente de livres, films, musique et produits numériques. Enregistré au Royaume-Uni sous le numéro 11984497. Pour plus d'informations, visitez <a href="http://www.r-b-a.fr">http://www.r-b-a.fr</a>.</p>
     </footer>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'fr'}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 </html>
