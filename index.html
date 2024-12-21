@@ -274,7 +274,7 @@
     </section>
 
 <section id="blog" style="margin: 40px 20px; text-align: center;">
-    <h2 style="font-family: Arial, sans-serif; color: white; background-color: #333; padding: 10px;">Blog de KharYsma : Hobbies, Art et Inspiration</h2>
+    <h2 style="font-family: Arial, sans-serif; color: white; background-color: #333; padding: 10px;">Blog de KharYsma : Hobbies, Art,nourriture, voyage et Inspiration</h2>
     <iframe 
         src="https://kharysmataste.blogspot.com/" 
         style="width: 90%; max-width: 800px; height: 400px; border: 5px solid #f9c74f; box-shadow: 0 0 20px #f9c74f; border-radius: 10px;">
@@ -393,6 +393,36 @@
     // Utilisez la fonction pour tenter de charger la page d'accueil
     loadPage(window.location.href);
 </script>
+
+<script>
+    // Lazy loading des images pour améliorer les performances
+    document.addEventListener('DOMContentLoaded', function () {
+        const lazyImages = document.querySelectorAll('img');
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver(function (entries, observer) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.add('loaded'); // Ajouter une classe pour les styles CSS
+                        observer.unobserve(img);
+                    }
+                });
+            });
+            lazyImages.forEach(function (img) {
+                observer.observe(img);
+            });
+        }
+    });
+
+    // Optimisation du rendu des polices web
+    if ('fonts' in document) {
+        document.fonts.ready.then(function () {
+            console.log("Polices web prêtes");
+        });
+    }
+</script>
+
 
     <footer style="padding-bottom: 100px;">
         <p>&copy; 2024 - Produit par le label Groupe Business Therapie. KharYsma Arafat NZABA est soutenu numériquement par Royaume des bonnes affaires LTD, le distributeur officiel du producteur. Spécialisé dans la vente de livres, films, musique et produits numériques. Enregistré au Royaume-Uni sous le numéro 11984497. Pour plus d'informations, visitez <a href="http://www.r-b-a.fr">http://www.r-b-a.fr</a>.</p>
