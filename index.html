@@ -325,22 +325,23 @@
     <p><a href="politique.html" target="_blank">Politique de confidentialité et mentions légales</a></p>
 </div>
 
-<div id="gtranslate"></div>
-<script type="text/javascript" src="https://cdn.gtranslate.net/widgets/latest/gtranslate.js"></script>
-<script type="text/javascript">
-    new GTranslate({
-        selector: "#gtranslate",
-        languages: ["en", "fr", "es", "de"], // Ajoutez ici les langues souhaitées
-        layout: "dropdown" // Style en menu déroulant
-    });
-</script>
-    
-<script src="https://cdn.microsofttranslator.com/widget/v3.js"></script>
-<div id="MicrosoftTranslatorWidget" class="Translator" style="display:inline-block;"></div>
+<div id="MicrosoftTranslatorWidget" style="text-align:center; margin:20px;"></div>
 <script>
-    setTimeout(function(){
-        new Microsoft.Translator.Widget.Translate('fr', 'en', null, null, null, null, null);
-    }, 1000);
+    function loadMicrosoftTranslator() {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://www.microsofttranslator.com/Ajax/V3/WidgetV3.js';
+        script.charset = 'UTF-8';
+        script.onload = function () {
+            Microsoft.Translator.Widget.Translate('fr', '', function () {
+                console.log('Microsoft Translator loaded successfully.');
+            }, function (error) {
+                console.error('Microsoft Translator error:', error);
+            });
+        };
+        document.getElementsByTagName('head')[0].appendChild(script);
+    }
+    loadMicrosoftTranslator();
 </script>
 
     <footer style="padding-bottom: 100px;">
