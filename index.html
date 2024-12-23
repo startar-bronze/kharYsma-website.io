@@ -306,13 +306,25 @@
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-<!-- Google Translate Script -->
+<style>
+    #google_translate_element select {
+        background-color: #222;
+        color: #fff;
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+    #google_translate_element {
+        text-align: right;
+    }
+</style>
 <script type="text/javascript">
     function googleTranslateElementInit() {
-        new google.translate.TranslateElement(
-            {pageLanguage: 'fr', layout: google.translate.TranslateElement.InlineLayout.SIMPLE},
-            'google_translate_element'
-        );
+        new google.translate.TranslateElement({
+            pageLanguage: 'fr',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
     }
 </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
